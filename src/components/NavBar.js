@@ -7,7 +7,7 @@ import {AiOutlineShoppingCart} from "react-icons/ai";
 const NavBar = () => {
     return(
       <div>
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav className="navbar navbar-expand-lg navbar-light bg-light">
   <div className="container-fluid">
     <a class="navbar-brand" href="#">Tienda NBA</a>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -24,14 +24,15 @@ const NavBar = () => {
         <li className="nav-item">
           <a className="nav-link" href="#">Niños</a>
         </li>
+        
       </ul>
       
     </div>
   
   </div>
-      
+  <CarWidget/>  
 </nav>
-<CarWidget/>   
+ 
 </div>
     )
 }
