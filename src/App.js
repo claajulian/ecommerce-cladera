@@ -12,7 +12,7 @@ function App() {
     <div className="App">
       
       <NavBar />
-      <ItemListContainer greetings="Item List Container" />
+      <ItemListContainer />
       <ItemCount max={5} initial={1}/>
       
       
