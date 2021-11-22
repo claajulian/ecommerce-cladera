@@ -1,5 +1,6 @@
 
 import React, {useEffect, useState} from 'react'
+import Item from './Item'
 
 const ItemList = ( props ) => {
   
@@ -10,12 +11,10 @@ const ItemList = ( props ) => {
        props.catalogo.map(elem =>
 
         
-      <div key={elem.id}>
-      <h2>{elem.titulo}</h2>
-      <img src={elem.imageURL} alt="imagen"  />
+     
+      <Item props={elem}/>
 
-      
-      </div>
+     
        
         )
       }
