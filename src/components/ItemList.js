@@ -7,7 +7,7 @@ const ItemList = ( props ) => {
   return (
     <>
       { 
-
+        props.catalogo.legth !== 0 && 
        props.catalogo.map(elem =>
 
         

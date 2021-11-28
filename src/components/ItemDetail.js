@@ -11,7 +11,7 @@ const ItemDetail = (props) => {
         alert("You have selected " + qty + " items.");
     }
 
-console.log(props.content);
+    console.log(props.content);
 
     return (
 

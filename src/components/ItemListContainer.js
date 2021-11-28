@@ -1,10 +1,16 @@
 import { useEffect, useState } from "react";
 import ItemList from "./ItemList";
 import products from "../utils/data";
+import { useParams } from "react-router";
+
+
 
 const ItemListContainer = () => {
     
     const [text,setText] = useState([])
+    const {idCategory} = useParams();
+
+    
     
     let is_ok = true;
 
@@ -24,7 +30,11 @@ const ItemListContainer = () => {
     
     useEffect(()=>{
         // getDatos(2000, products)
-        getDatos(2000, products)
+        getDatos(2000, products.filter(item =>{
+            if(idCategory === undefined) return item;
+            return item.category === idCategory
+      
+        }))
           
         .then((data)=> setText(data))
           .catch((err)=>{
@@ -33,7 +43,7 @@ const ItemListContainer = () => {
           })
           .finally(()=> console.log("Se completó la carga."))
         
-    },[])
+    },[text])
 
     return (
         <>

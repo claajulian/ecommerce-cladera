@@ -2,10 +2,16 @@ import React from 'react'
 import { useEffect, useState } from 'react';
 import ItemDetail from './ItemDetail';
 import data from '../utils/data';
+import { useParams } from "react-router";
+
+
+
 
 const ItemDetailContainer = () => {
 
     const [text,setText] = useState([])
+    const {idItem} = useParams()
+
     
     let is_ok = true;
 
@@ -25,7 +31,7 @@ const ItemDetailContainer = () => {
     
     useEffect(()=>{
         // getDatos(2000, products)
-        getDatos(2000,data.find(datoEncontrado => datoEncontrado.id === 1 ))
+        getDatos(2000,data.find(datoEncontrado => datoEncontrado.id === parseInt(idItem )))
           
         .then((res)=>setText(res))
           .catch((err)=>{

@@ -8,7 +8,7 @@ const products = [
         description:"Jersey Authentic Nike",
         stock:6,
         initial:1,
-        category:""
+        category:"Hombre"
         
     },
     {
@@ -19,7 +19,7 @@ const products = [
         description:"Jersey NY Authentic Nike" ,
         stock:8,
         initial:1,
-        category:""
+        category:"Niños"
         
     },
     {
@@ -30,7 +30,7 @@ const products = [
         description:"Jersey Authentic Los Angeles Lakers",
         stock:5,
         initial:1,
-        category:""
+        category:"Mujer"
         
     }
 ]
